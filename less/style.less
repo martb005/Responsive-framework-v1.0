@@ -1,0 +1,250 @@
+@import url('reset.less');
+@import url('text.less');
+@import url('variables.less');
+
+body {
+	background: @light;
+	width: 100%;
+}
+.wrapper {
+	width: 940px;
+	margin: 0 auto;
+}
+header, nav ul, footer {
+	width: 100%;
+}
+header {
+	height: 300px;
+	background: #fff;
+	margin-bottom: @gutter;
+	padding: @gutter;
+}
+footer {
+	background: #fff;
+	height: 200px;
+	padding: @gutter;
+	margin-top: @gutter;
+}
+/* ============================================= */
+	/*  Nav */
+/* ============================================= */
+#menu-icon {
+	display: none; /* hide menu icon initially */
+}
+#nav,#nav li {
+	margin: 0;
+	padding: 0;
+}
+#nav li {
+	float: left;
+	margin-right: @gutter;
+}
+#nav a {
+	display: block;
+	color: #666;
+	padding: 10px;
+	background: #eee;
+}
+#nav ul {
+	position: absolute;
+	display: none; /* hide dropdown */
+}
+#nav ul li {
+	float: none;
+}
+#nav li:hover > ul {
+	display: block; /* show dropdown on hover */
+	width: 20%;
+}
+/* ============================================= */
+	/*  Grid */
+/* ============================================= */
+div.col {
+	float: left;
+	margin: @gutter @gutter 0 0;
+	padding: @gutter;
+	background: white;
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}
+div.row {
+	margin: 0 auto;
+	clear: both;
+	display:block;
+}
+div.row div:last-child {
+	margin-right: 0 !important;
+}
+div.row div.last-child {
+	margin-right: 0 !important; /* Box-sizing VS :last-child Fix for IE8 */
+}
+.one {
+	width: 4.255326%;
+}
+.two {
+	width: 10.638315%;
+}
+.three {
+	width: 17.021304%;
+}
+.four {
+	width: 23.404293%;
+}
+.five {
+	width: 29.787282%;
+}
+.six {
+	width: 36.170271%;
+}
+.seven {
+	width: 42.55326%;
+}
+.eight {
+	width: 48.936249%;
+}
+.nine {
+	width: 55.319238%;
+}
+.ten {
+	width: 61.702227%;
+}
+.eleven {
+	width: 68.085216%;
+}
+.twelve {
+	width: 74.468205%;
+}
+.thirteen {
+	width: 80.851194%;
+}
+.fourteen {
+	width: 87.234183%;
+}
+.fifteen {
+	width: 93.617172%;
+}
+.sixteen {
+	width: 100%;
+}
+/* ============================================= */
+	/*  Sprite */
+/* ============================================= */
+.spriteclassname {
+	.sprite(1,1); /* Demo */
+}
+/* ============================================= */
+	/*  Media Queries */
+/* ============================================= */
+@media all and (max-width: 939px) and (min-width: 1px) {
+	.wrapper {
+		width: 100%;
+	}
+	header {
+		height: 250px;
+	}
+	.col img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+}
+@media all and (max-width: 767px) and (min-width: 1px) {
+	header {
+		height: 200px;
+	}
+	footer {
+		height: 150px;
+	}
+	
+	div.col {
+		float: none;
+		width: 100%;
+	}
+	#nav-wrap {
+		position: relative;
+	}
+	.menu-icon {
+		.sprite(3,0);
+		background-repeat: no-repeat;
+		float: left;
+		margin-right: 10px;
+	}
+	#menu-icon {
+		padding: 10px;
+		height: 52px;
+		line-height: 32px;
+		cursor: pointer;
+		background-color: #eee;
+		display: block; /* Show menu icon */
+	}
+	#nav {
+		clear: both;
+		position: absolute;
+		width: 100%;
+		z-index: 10000;
+		background: #ddd;
+		display: none; /* Visibility will be toggled with jquery */
+	}
+	#nav a {
+		padding: @gutter;
+	}
+	#nav li {
+		clear: both;
+		float: none;
+		margin: 0;
+	}
+	#nav a, #nav ul a {
+		font: inherit;
+		background: none;
+		display: block;
+		border-bottom: 1px solid @mid;
+	}
+	#nav li:hover > ul {
+		width: 100%;
+	}
+	#nav a:hover, #nav ul a:hover {
+	}
+	#nav ul {
+		width: auto;
+		position: static;
+		display: block;
+		border: none;
+		background: inherit;
+	}
+	#nav ul li a {
+		color: #fff;
+	}
+}
+@media all and (max-width: 479px) and (min-width: 1px) {
+	header {
+		height: 150px;
+	}
+	footer {
+		height: 100px;
+	}
+}
+@media screen and (min-width: 767px) {
+	#nav {
+		display: block !important;
+	}
+}
+/* ============================================= */
+	/*  Responsive embed tag */
+/* ============================================= */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    //padding-bottom: 75%; /* 4/3 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

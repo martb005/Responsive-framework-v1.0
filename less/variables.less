@@ -1,0 +1,31 @@
+/* ============================================= */
+	/*  color */
+/* ============================================= */
+@light: #ddd;
+@mid: #bbb;
+@dark: #333;
+
+/* ============================================= */
+	/*  structure */
+/* ============================================= */
+@main-width: 960px;
+.box-sizing {
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+@gutter: 2.127663%;
+
+/* ============================================= */
+	/*  Sprite */
+/* ============================================= */
+@spriteGrid: 32px;
+.sprite(@x, @y) {
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	background-position: -(@x*@spriteGrid) -(@y*@spriteGrid);
+	width: 32px;
+	height: 32px;
+	}

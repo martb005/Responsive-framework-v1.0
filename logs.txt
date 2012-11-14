@@ -1,0 +1,25 @@
+24 juin 2012
+Création du dev.
+Programmation du framework responsive.
+Intégration du LESS.
+
+1er juillet 2012
+Ajout et programmation CSS du fichier .less « démo ».
+
+2 août 2012
+Désactivation du fichier .less « démo ».
+Ajout de la fonctionnalité « responsive embed tag » pour les vidéos.
+Ajout de menu minimisé pour les résolutions plus petites.
+
+6 août 2012
+Modification du sprite.png et .psd en ajoutant un set d'icônes par défaut.
+
+14 août 2012
+Modification de la sub nav mobile pour l'affiche pleine largeur.
+Mise à jour d'icône du sprite.png.
+Correction pour IE 8- qui ne supporte pas last-child... non résolu.
+
+15 août 2012
+Correction du box-sizing VS :last-child pour IE8. Fix Javascript.
+Ajout des METAs Apple Touch /inc.
+Suppression du demo.less
